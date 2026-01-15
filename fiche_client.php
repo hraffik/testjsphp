@@ -251,32 +251,9 @@ renderDropzone($equipeDir,'filesEquipe','deleteEquipe','Documents équipe',$user
 <hr>
 <form method="POST" class="card p-4 shadow mb-4">
 <label class="form-label">Observation</label>
-
-<!-- ################################################################################################################ -->
-<!-- ###############################      code pour champt de texte observation   ################################### -->
-<!-- ################################################################################################################ -->
-<style>
-    /* Masque l'avertissement de licence */
-    .cke_notification_warning,
-    [role="alert"] {
-        display: none !important;
-    }
-</style>
-
-<!-- Remplace juste la version LTS par 4.22.1 -->
-<textarea name="obsValidRT" id="obsValidRT" class="form-control" rows="10"><?= $client['obsValidRT'] ?></textarea>
-
+<textarea name="obsValidRT" class="form-control" rows="10"><?= $client['obsValidRT'] ?></textarea>
 <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
-<script>
-    CKEDITOR.replace('obsValidRT', {
-        language: 'fr',
-        height: 300
-    });
-</script>
-
-<!-- ################################################################################################################ -->
-<!-- ################################################################################################################ -->
-
+<script>CKEDITOR.replace('obsValidRT');</script>
 <br>
 <input type="hidden" name="updateObs" >
 <button type="submit" class="btn btn-warning w-100">Mettre à jour</button>
